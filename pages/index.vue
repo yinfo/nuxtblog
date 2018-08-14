@@ -1,8 +1,8 @@
 <template>
   <div class="index container" v-scroll="onLoad">
     <top-list :articles="$store.state.articles" />
-    <p v-if="isLoading" class="load-tip">加载中...</p>
-    <p v-if="noMore" class="load-tip">没有更多文章了</p>
+    <p v-if="isLoading" class="load-tip">Загрузка...</p>
+    <p v-if="noMore" class="load-tip">Больше статей </p>
   </div>
 </template>
 <script>
