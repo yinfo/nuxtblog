@@ -8,11 +8,19 @@ export default () => {
     state: {
       token: '',
       githubToken: '',
-      user: {},
+      user: {
+        role: 'superAdmin',
+        username: 'q',
+        password: 'q',
+        email: 'qq22337383@gmail.com',
+        nickname: 'nobody',
+        motto: 'Never too old to learn',
+        avatar: 'avatar.png'
+      },
       total: 0,
       articles: [],
       tags: [],
-      tagArticles: [], // 标签下的文章列表
+      tagArticles: [], // Список статей под лейблом
       searchArticles: [],
       archives: [],
       githubApi:{

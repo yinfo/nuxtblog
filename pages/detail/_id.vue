@@ -5,7 +5,7 @@
       <span>
         {{ article.createdAt | formatDate('yyyy-MM-dd') }}
         <span class="meta-division">/</span> {{ article.updatedAt | formatDate('yyyy-MM-dd') }}
-      <span class="meta-division">/</span> {{ article.views }}次浏览
+      <span class="meta-division">/</span> {{ article.views }}мнения
       </span>
     </div>
     <div class="detail-content">
@@ -15,11 +15,11 @@
       <nuxt-link v-for="(tag, index) in article.tags" :key="index" :to="'/tags/' + tag.id">{{ tag.name }}</nuxt-link>
     </p>
     <div class="detail-copyright">
-      <p>文章采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">知识共享署名 4.0 国际许可协议</a> 进行许可，转载时请注明原文链接。</p>
+      <p>Употребление статьи <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 Международное лицензионное соглашение</a> лицензирование，Пожалуйста, укажите оригинальную ссылку при перепечатке</p>
     </div>
     <div class="detail-admin" v-if="isLogin">
-      <p class="admin-del"><a @click="del(article.id)">删除</a></p>
-      <p class="admin-edit"><a @click="edit(article.id)">编辑</a></p>
+      <p class="admin-del"><a @click="del(article.id)">удалять</a></p>
+      <p class="admin-edit"><a @click="edit(article.id)">редактировать</a></p>
     </div>
     <div v-if="isConfig">
       <top-comment :comment-list="article.comments" :article-id="article.id" />
@@ -80,7 +80,7 @@ export default {
     del(id) {
       this.$store.dispatch('DELETE_ARTICLE', id).then(data => {
         if (data.success) {
-          this.$refs.tip.openTip('文章已删除')
+          this.$refs.tip.openTip('Статья удалена')
           this.$router.go(-1)
         }
       })

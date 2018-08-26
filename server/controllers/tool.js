@@ -113,11 +113,11 @@ export const sendEmail = async (ctx, next) => {
   let mailOptions = {
     from: config.emailConfig.user,
     to: toUserEmail,
-    subject: '博客评论通知',
-    html: `<p>${fromUserNickname}回复了你的评论：<p>
-    <p>原内容：${toUserContent}<p>
-    <p>回复内容：${fromUserContent}<p>
-    <p><a href="${domain}/detail/${articleId}">查看原文</a></p>`.trim()
+    subject: 'Уведомление о комментариях',
+    html: `<p>${fromUserNickname}Ответил ваш комментарий：<p>
+    <p>Исходное содержание：${toUserContent}<p>
+    <p>Ответить содержание：${fromUserContent}<p>
+    <p><a href="${domain}/detail/${articleId}">Просмотреть оригинал</a></p>`.trim()
   }
   await transporter.sendMail(mailOptions).then(function(info){
     ctx.body = {

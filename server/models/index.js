@@ -9,13 +9,14 @@ require('./comment')
 
 const User = mongoose.model('User')
 
-const mongoUrl = `mongodb://${config.mongodb.host}:${config.mongodb.port}/${config.mongodb.database}`
+// const mongoUrl = `mongodb://${config.mongodb.host}:${config.mongodb.port}/${config.mongodb.database}`
+const mongoUrl = 'mongodb://yinfo:y5724189@ds050559.mlab.com:50559/db1'
 mongoose.Promise = global.Promise
 mongoose.connection
   .openUri(mongoUrl)
   .once('open', async () => {
     console.log('database connect successed')
-    // 初始化管理员信息
+    // Инициализировать информацию администратора
     let userInfo = config.user
     userInfo.password = md5(userInfo.password)
 

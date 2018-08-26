@@ -20,7 +20,7 @@ export default {
   },
   head() {
     return {
-      title: '归档 - ' + this.$store.state.user.nickname
+      title: 'файл - ' + this.$store.state.user.nickname
     }
   }
 }

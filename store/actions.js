@@ -2,8 +2,9 @@ import axios from 'axios'
 
 export default {
   async nuxtServerInit({ dispatch, commit, getters }, { req, res }) {
+
     if (req.headers.cookie) {
-      // 解析cookie
+      // решение cookie
       let cookie = req.headers.cookie, cookieObj = {}, cookieArr = [], key = '', value = '';
       cookie = cookie.split(';')
       for (let i = 0; i < cookie.length; i++) {
@@ -24,7 +25,7 @@ export default {
     commit('SET_USER', data)
   },
 
-  // 标签相关操作
+  // Операции, связанные с тегами
   async CREATE_TAG({ commit, state, getters }, params) {
     // eg: {name: 'new tag'}
     const { data } = await axios.post(`${getters.baseUrl}/tag`, params)
@@ -53,7 +54,7 @@ export default {
   },
 
 
-  // 文章相关操作
+  // Связанные с статьей операции
   async ARTICLES({ commit, state, getters }, page = 1, limit = 15) {
     const { data } = await axios.get(`${getters.baseUrl}/articles/${page}/${limit}`)
     commit('SET_ARTICLES', data)
@@ -86,7 +87,7 @@ export default {
     return data
   },
 
-  // 评论相关操作
+  // Операции с комментариями
   async CREATE_COMMENT({ commit, state, getters }, params) {
     const { data } = await axios.post(`${getters.baseUrl}/comment`, params)
     return data
@@ -102,46 +103,48 @@ export default {
     return data
   },
 
-  // 搜索
+  // поиск
   async SEARCH({ commit, state, getters }, id = '') {
     const { data } = await axios.get(`${getters.baseUrl}/search/${id}`)
     commit('SET_SEARCH', data)
     return data
   },
 
-  // 获取归档
+  // Получить архив
   async ARCHIVES({ commit, state, getters }) {
     const { data } = await axios.get(`${getters.baseUrl}/archives`)
     commit('SET_ARCHVES', data)
     return data
   },
 
-  // 发送邮件
+  // Отправить письмо
   async SEND_EMAIL({ commit, state, getters }, params) {
     const { data } = await axios.post(`${getters.baseUrl}/send-email`, params)
     return data
   },
 
-  // 获取管理员信息
+  // Получить информацию администратора
   async ADMIN_INFO({ commit, state, getters }) {
     const { data } = await axios.get(`${getters.baseUrl}/user`)
     return data
   },
 
-  // 更新管理员信息
+  // Обновление информации администратора
   async UPDATE_ADMIN({ commit, state, getters }, params) {
     const { data } = await axios.patch(`${getters.baseUrl}/user`, params)
     return data
   },
 
-  // 管理员登录
+  // Вход для администратора
   async LOGIN({ commit, state, getters }, user) {
+    console.log('user=',user)
     const { data } = await axios.post(`${getters.baseUrl}/login`, user)
+    console.log('data=',data)
     commit('SET_TOKEN', data.data.token)
     return data
   },
 
-  // 管理员退出
+  // Выход администратора
   async LOGOUT({ commit, state, getters }) {
     const { data } = await axios.post(`${getters.baseUrl}/logout`)
     return data

@@ -2,15 +2,15 @@
   <div class="search container">
     <div v-if="$route.params.id">
       <div class="search-result">
-        <p>找到{{ $store.state.searchArticles.length }}篇和 <span>{{ keyword }}</span> 相关的文章</p>
+        <p>найти{{ $store.state.searchArticles.length }}Статья и <span>{{ keyword }}</span> Связанные статьи</p>
         <top-list :articles="$store.state.searchArticles" />
       </div>
     </div>
     <div v-else>
       <div class="search-wrap">
-        <h3>文章搜索</h3>
+        <h3>Поиск статьи</h3>
         <label>
-          <input type="text" v-model="keyword" @keyup.enter="search" autofocus placeholder="回车搜索" maxlength="30">
+          <input type="text" v-model="keyword" @keyup.enter="search" autofocus placeholder="Вернуться назад" maxlength="30">
         </label>
       </div>
     </div>
@@ -24,7 +24,7 @@ export default {
   },
   head() {
     return {
-      title: '搜索 - ' + this.$store.state.user.nickname
+      title: 'поиск - ' + this.$store.state.user.nickname
     }
   },
   data() {

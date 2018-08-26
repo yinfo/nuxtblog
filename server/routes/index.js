@@ -47,6 +47,6 @@ router
 router
   .post('/api/comment', comment.postComment)
   .get('/api/comments', comment.getComments)
-  .del('/api/comment/:id?', checkToken, comment.deleteComment) // 管理员可以删除评论
+  .del('/api/comment/:id?', checkToken, comment.deleteComment) // Администратор может удалять комментарии
 
 export default router

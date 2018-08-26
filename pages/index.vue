@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     async onLoad() {
-      // 没有正在加载中
+      // Не загружать
       if(!this.isLoading) {
         if(this.$store.state.articles.length < this.$store.state.total) {
           this.isLoading = true

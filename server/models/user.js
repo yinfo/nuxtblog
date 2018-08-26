@@ -22,7 +22,7 @@ const UserSchema = new Schema({
   }
 })
 
-// 隐藏一些字段
+// Скрыть некоторые поля
 UserSchema.options.toJSON = {
   virtuals: true,
   versionKey: false,

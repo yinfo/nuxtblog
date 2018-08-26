@@ -12,12 +12,19 @@ export default {
     secret: 'vueblog'
   },
   mongodb: {
-    host: '127.0.0.1',
-    database: 'vueblog',
-    port: 27017,
-    username: '',
-    password: ''
+    host: 'ds050559.mlab.com',
+    database: 'db1',
+    port: 50559,
+    username: 'yinfo',
+    password: 'y5724189'
   },
+  // mongodb: {
+  //   host: '127.0.0.1',
+  //   database: 'vueblog',
+  //   port: 27017,
+  //   username: '',
+  //   password: ''
+  // },
   githubConfig: {
     githubClient: '',
     githubSecret: '',

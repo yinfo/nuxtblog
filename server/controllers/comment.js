@@ -7,14 +7,14 @@ const User = mongoose.model('User')
 export const postComment = async(ctx, next) => {
   let body = ctx.request.body
   let { id, token, content, replyId  = ''} = body
-  // replyId表示是一条回复，是可选的
+  // replyId Указывает ответ и не является обязательным.
   if (!id || !token || !content) {
     return (ctx.body = {
       success: false,
       err: 'Field incomplete'
     })
   }
-  // 根据token获取用户名
+  // Согласно token Получить имя пользователя
   const { data } = await axios.get('https://api.github.com/user?access_token=' + token)
   if (data.login) {
     let user = await User.findOne({ username: data.login })
@@ -25,9 +25,9 @@ export const postComment = async(ctx, next) => {
         article: id,
         replyId: replyId
       })
-      // 保存用户评论
+      // Сохранить комментарии пользователей
       await comment.save()
-      // 更新文章评论
+      // Обновить комментарии к статье
       await Article.findByIdAndUpdate(id, { $push: { comments: comment } }, { safe: true, upsert: true })
       ctx.body = {
         success: true,

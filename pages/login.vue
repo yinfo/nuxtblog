@@ -1,8 +1,8 @@
 <template>
   <div class="login container">
-    <input type="text" placeholder="用户名" autocomplete="off" v-model="user.username">
-    <input type="password" placeholder="密码" autocomplete="off" v-model="user.password" @keyup.enter="login">
-    <button @click="login">登 录</button>
+    <input type="text" placeholder="имя пользователя" autocomplete="off" v-model="user.username">
+    <input type="password" placeholder="пароль" autocomplete="off" v-model="user.password" @keyup.enter="login">
+    <button @click="login">войти</button>
     <top-tip ref="tip"/>
   </div>
 </template>
@@ -15,19 +15,22 @@ export default {
   },
   head() {
     return {
-      title: '登录 - ' + this.$store.state.user.nickname
+      title: 'войти - ' + this.$store.state.user.nickname
     }
   },
   methods: {
     login() {
+
       if(!this.user.username || !this.user.password) {
         return false
       }
+
       this.$store.dispatch('LOGIN', this.user).then(data => {
+        console.log('data.success=',data.success)
         if(data.success) {
           this.$router.push('/admin/publish')
         } else {
-          this.$refs.tip.openTip('用户名或密码不正确')
+          this.$refs.tip.openTip('Имя пользователя или пароль неверны')
         }
       })
     }

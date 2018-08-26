@@ -15,7 +15,7 @@ function parseCookies(cookies) {
   return cookieObj
 }
 export const checkToken = async(ctx, next) => {
-  // 可以从cookie里面获得token，也可以从request header里获取token
+  // Может быть от cookie содержат token，Также доступен из request header Входите token
   let cookieObj = parseCookies(ctx.get('Cookie')), token = ''
   if(cookieObj && cookieObj.token) {
     token = cookieObj.token
@@ -58,7 +58,7 @@ export const checkGithubToken = async(ctx, next) => {
   if (githubToken) {
     try {
       const { data } = await axios.get('https://api.github.com/user?access_token=' + githubToken)
-      // 用户存在
+      // Присутствие пользователя
       let user = await User.findOne({ username: data.login })
       if (user._id && user.username) {
         await next()

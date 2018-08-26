@@ -1,18 +1,18 @@
 <template>
   <div class="admin-update">
     <div class="update-info">
-      <h4>修改个人信息</h4>
+      <h4>Изменение личной информации</h4>
       <input type="text" v-model="user.nickname">
       <input type="text" v-model="user.motto">
       <input type="text" v-model="user.email">
-      <button @click="updateInfo">确认修改</button>
+      <button @click="updateInfo">Подтвердить изменение</button>
     </div>
     <div class="update-password">
-      <h4>修改密码</h4>
-      <input type="password" v-model="oldPassword" placeholder="输入旧密码">
-      <input type="password" v-model="newPassword" placeholder="输入新密码">
-      <input type="password" v-model="vertifyPassword" placeholder="再次输入新密码">
-      <button @click="updatePassword">确认修改</button>
+      <h4>Изменить пароль</h4>
+      <input type="password" v-model="oldPassword" placeholder="Введите старый пароль">
+      <input type="password" v-model="newPassword" placeholder="Введите новый пароль">
+      <input type="password" v-model="vertifyPassword" placeholder="Введите новый пароль еще раз.">
+      <button @click="updatePassword">Подтвердить изменение</button>
     </div>
     <top-tip ref="tip"/>
   </div>
@@ -35,14 +35,14 @@ export default {
   },
   head() {
     return {
-      title: '修改信息 - ' + this.$store.state.user.nickname
+      title: 'Изменить информацию - ' + this.$store.state.user.nickname
     }
   },
   methods: {
     updateInfo() {
       this.$store.dispatch('UPDATE_ADMIN', this.user).then((data) => {
         if(data.success) {
-          this.$refs.tip.openTip('信息修改完成')
+          this.$refs.tip.openTip('Завершена обработка информации')
         }
       })
     },
@@ -51,12 +51,12 @@ export default {
         return false
       }
       if (this.newPassword !== this.vertifyPassword) {
-        this.$refs.tip.openTip('两次密码不一致！')
+        this.$refs.tip.openTip('Два пароля непоследовательны！')
         return false
       }
       this.$store.dispatch('UPDATE_ADMIN', { oldPassword: this.oldPassword, newPassword: this.newPassword }).then((data) => {
         if(data.success) {
-          this.$refs.tip.openTip('密码重置完成')
+          this.$refs.tip.openTip('Сброс пароля завершен')
           // clear token
           this.$store.dispatch('LOGOUT').then(ret => {
             if(ret.success) {

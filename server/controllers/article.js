@@ -114,7 +114,7 @@ export const postArticle = async(ctx, next) => {
 }
 
 
-// 修改私有文章或已发布文章
+// Редактирование частных статей или опубликованных статей
 export const patchArticle = async(ctx, next) => {
   let body = ctx.request.body
   body.updatedAt = Date.now()
@@ -205,7 +205,7 @@ export const archives = async(ctx, next) => {
     if (month.length === 1) {
       month = '0' + month
     }
-    date = `${year}年${month}月`
+    date = `${year}год${month}месяц`
     arr.push({
       date: date,
       article: articles[i]
@@ -248,12 +248,12 @@ export const upload = async(ctx, next) => {
         // console.log(files)
         let lastItem = files[Object.keys(files)[Object.keys(files).length - 1]]
 
-        // 获取文件后缀名
+        // Получить имя суффикса файла
         let extname = Date.now() + path.extname(lastItem.name)
         let oldUrl = lastItem.path
         let newUrl = './public/' + extname
 
-        // 文件重命名，上传到服务器
+        // Переименование файлов, загрузка на сервер
         let readStream = fs.createReadStream(oldUrl)
         let writeStream = fs.createWriteStream(newUrl)
         readStream.pipe(writeStream)
