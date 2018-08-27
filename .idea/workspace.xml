@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ed3ff02-75e2-4730-8df5-bd20d08db53c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin/update.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/update.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/archives.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/archives.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/detail/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail/_id.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/search/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/_id.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/tags/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tags/_id.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/comment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/tool.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/tool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/middlewares/check-token.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middlewares/check-token.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/mutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/publish/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/publish/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/tags.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/tags.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,11 +20,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="update.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/admin/update.vue">
+      <file leaf-file-name="default.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/layouts/default.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="38" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="38" />
+            <state relative-caret-position="194">
+              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tags.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/admin/tags.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -55,6 +46,9 @@
       <find>superAdmin</find>
       <find>'root'</find>
       <find>findOne</find>
+      <find>首页</find>
+      <find>删除</find>
+      <find>退出</find>
     </findStrings>
     <dirStrings>
       <dir>D:\_Vue\_Nuxt_Express\Vueblog_git_clone\nuxtblog</dir>
@@ -68,7 +62,6 @@
       <list>
         <option value="$PROJECT_DIR$/server/config/index.js" />
         <option value="$PROJECT_DIR$/store/mutations.js" />
-        <option value="$PROJECT_DIR$/layouts/default.vue" />
         <option value="$PROJECT_DIR$/server/controllers/article.js" />
         <option value="$PROJECT_DIR$/server/controllers/comment.js" />
         <option value="$PROJECT_DIR$/server/controllers/tool.js" />
@@ -86,6 +79,9 @@
         <option value="$PROJECT_DIR$/pages/search/_id.vue" />
         <option value="$PROJECT_DIR$/pages/detail/_id.vue" />
         <option value="$PROJECT_DIR$/pages/admin/update.vue" />
+        <option value="$PROJECT_DIR$/pages/admin/publish/_id.vue" />
+        <option value="$PROJECT_DIR$/pages/admin/tags.vue" />
+        <option value="$PROJECT_DIR$/layouts/default.vue" />
       </list>
     </option>
   </component>
@@ -127,11 +123,6 @@
             <path>
               <item name="nuxtblog" type="b2602c69:ProjectViewProjectNode" />
               <item name="nuxtblog" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nuxtblog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nuxtblog" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -149,29 +140,8 @@
               <item name="nuxtblog" type="b2602c69:ProjectViewProjectNode" />
               <item name="nuxtblog" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="detail" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nuxtblog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nuxtblog" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nuxtblog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nuxtblog" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="tags" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nuxtblog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nuxtblog" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nuxtblog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nuxtblog" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="publish" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -256,24 +226,25 @@
       <workItem from="1534442078849" duration="1392000" />
       <workItem from="1535081963232" duration="2644000" />
       <workItem from="1535219730612" duration="775000" />
-      <workItem from="1535280283073" duration="901000" />
+      <workItem from="1535280283073" duration="3530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18965000" />
+    <option name="totallyTimeSpent" value="21594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="40" width="1290" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6772152" visible="true" weight="0.10454908" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6772152" visible="true" weight="0.14390244" />
       <window_info anchor="bottom" id="TODO" order="8" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.23101266" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32911393" />
-      <window_info anchor="right" id="Run" order="3" weight="0.27154472" />
-      <window_info id="npm" order="2" sideWeight="0.3227848" side_tool="true" visible="true" weight="0.10454908" />
+      <window_info anchor="right" id="Run" order="3" weight="0.2910569" />
+      <window_info id="npm" order="2" sideWeight="0.3227848" side_tool="true" visible="true" weight="0.14390244" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.4477848" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -284,7 +255,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.23101266" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,9 +305,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/tags/_id.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/archives.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -519,24 +486,12 @@
     <entry file="file://$PROJECT_DIR$/layouts/error.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/default.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-731">
-          <caret line="4" column="55" lean-forward="true" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/admin/comment.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/admin/private.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-68" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/admin/tags.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/components.js">
@@ -549,12 +504,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/filters.js">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/mixins.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store/getters.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/store/mutations.js">
@@ -633,8 +591,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/admin/update.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="38" />
+        <state relative-caret-position="986">
+          <caret line="58" column="55" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store/getters.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/admin/publish/_id.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2380">
+          <caret line="140" column="61" selection-start-line="140" selection-start-column="61" selection-end-line="140" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/admin/tags.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layouts/default.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
         </state>
       </provider>
     </entry>

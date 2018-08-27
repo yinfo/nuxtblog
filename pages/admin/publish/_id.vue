@@ -1,21 +1,21 @@
 <template>
   <div class="admin-publish">
-    <input type="text" placeholder="文章标题" v-model="article.title" class="publish-title">
+    <input type="text" placeholder="Название статьи" v-model="article.title" class="publish-title">
     <div class="publish-content">
       <top-editor v-model="article.content" :upload="upload" :options="options" @save="save" />
     </div>
     <div class="publish-handle">
-      <input type="text" placeholder="回车可创建新标签" v-model="tag" @keyup.enter="addTag">
+      <input type="text" placeholder="Введите, чтобы создать новый тег" v-model="tag" @keyup.enter="addTag">
       <ul class="handle-tag">
         <li v-for="(item, index) in article.tags" :key="index"> {{ item.name }} <span @click="delTag(item, index)">&times;</span></li>
       </ul>
       <div class="handle-button">
-        <button class="button-private" @click="publish(false)">存草稿</button>
-        <button class="button-publish" @click="publish(true)">发布</button>
+        <button class="button-private" @click="publish(false)">Сохранить черновик</button>
+        <button class="button-publish" @click="publish(true)">релиз</button>
       </div>
     </div>
     <div class="publish-tags">
-      <p class="tags-intro">插入标签：</p>
+      <p class="tags-intro">Вставить тег：</p>
       <div class="tags-all">
         <a v-for="(tag,index) in tags" :key="index" @click="chooseTag(tag)">{{ tag.name }}</a>
       </div>
@@ -47,7 +47,7 @@ export default {
 
   head() {
     return {
-      title: '发布文章 - ' + this.$store.state.user.nickname
+      title: 'Опубликовать - ' + this.$store.state.user.nickname
     }
   },
   mounted() {
@@ -77,7 +77,7 @@ export default {
   methods: {
     chooseTag(tag) {
       if (this.article.tags.findIndex(item => item.name === tag.name) > -1) {
-        this.$refs.tip.openTip('标签已存在！')
+        this.$refs.tip.openTip('Тег уже существует！')
         return
       }
       this.article.tags.push(tag)
@@ -99,7 +99,7 @@ export default {
         this.$store.dispatch('CREATE_TAG', { name: this.tag }).then((data) => {
           if (data.success) {
             this.article.tags.push(data.data)
-            this.$refs.tip.openTip('标签创建完成')
+            this.$refs.tip.openTip('Создание тега завершено')
             this.tag = ''
           }
         })
@@ -109,7 +109,7 @@ export default {
       let tagsID = []
       let article = {}
       if (!this.article.title || !this.article.content) {
-        this.$refs.tip.openTip('标题和内容不能为空！')
+        this.$refs.tip.openTip('Название и содержание не могут быть пустыми！')
         return false
       }
       this.article.tags.forEach((item) => {
@@ -126,7 +126,7 @@ export default {
         }
         this.$store.dispatch('UPDATE_ARTICLE', article).then((data) => {
           if (data.success) {
-            this.$refs.tip.openTip('文章更新完成')
+            this.$refs.tip.openTip('Обновление статьи завершено')
           }
         })
       } else {
@@ -138,7 +138,7 @@ export default {
         }
         this.$store.dispatch('CREATE_ARTICLE', article).then((data) => {
           if (data.success) {
-            this.$refs.tip.openTip('文章创建完成')
+            this.$refs.tip.openTip('Завершено создание статьи')
             this.article.title = ''
             this.article.content = ''
             this.article.tags = []

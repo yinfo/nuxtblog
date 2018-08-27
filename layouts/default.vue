@@ -17,7 +17,7 @@
               <li v-for="(nav, index) in adminNavs" :key="index" :class="{'nav-active': nav.routerName === $route.name}">
                 <nuxt-link :to="nav.path">{{ nav.name }}</nuxt-link>
               </li>
-              <li><a @click="logout">退出</a></li>
+              <li><a @click="logout">Выход</a></li>
             </ul>
             <!-- front navs -->
             <ul class="nav-list" v-else>
@@ -54,17 +54,17 @@ export default {
       navs: [{
           path: '/',
           routerName: 'index',
-          name: '首页'
+          name: 'Домой'
         },
         {
           path: '/tags',
           routerName: 'tags-id',
-          name: '标签'
+          name: 'Теги'
         },
         {
           path: '/archives',
           routerName: 'archives',
-          name: '归档'
+          name: 'Архив'
         }
       ],
 
@@ -72,22 +72,22 @@ export default {
         {
           path: '/admin/private',
           routerName: 'admin-private',
-          name: '草稿'
+          name: 'Проект'
         },
         {
           path: '/admin/comment',
           routerName: 'admin-comment',
-          name: '评论'
+          name: 'Комментарии'
         },
         {
           path: '/admin/tags',
           routerName: 'admin-tags',
-          name: '标签'
+          name: 'Теги'
         },
         {
           path: '/admin/update',
           routerName: 'admin-update',
-          name: '设置'
+          name: 'Об админе'
         }
       ]
     }
