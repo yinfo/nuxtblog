@@ -1,0 +1,51 @@
+{
+  "name": "top-editor",
+  "description": "A markdown editor",
+  "version": "0.0.8",
+  "author": "wmui",
+  "private": false,
+  "main": "dist/build.js",
+  "directories": {
+    "dist": "dist"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --port 3005",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuetop/top-editor.git"
+  },
+  "keywords": [
+    "top-editor",
+    "markdown",
+    "vue",
+    "markdown-it"
+  ],
+  "peerDependencies": {
+    "highlight.js": "^9.12.0",
+    "markdown-it": "^8.4.0",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^6.0.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^3.0.0",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^5.0.1",
+    "vue-loader": "^12.1.0",
+    "vue-template-compiler": "^2.3.3",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vuetop/top-editor/issues"
+  },
+  "homepage": "https://github.com/vuetop/top-editor#readme"
+}
