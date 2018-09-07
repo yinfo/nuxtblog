@@ -36,7 +36,7 @@ export default {
   },
   app: {
     domain: '',
-    host: '192.168.1.41',
+    host: '89.223.92.42',
     port: 3000,
     routerBaseApi: 'api'
   }
